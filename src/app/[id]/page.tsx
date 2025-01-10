@@ -1,6 +1,7 @@
+
 import React from 'react'
 
-const DaynamicBook = async  (props : any ) => {
+const DaynamicBook = async  (props: { params: { id: string } }) => {
     console.log(props);
     
   const url = await fetch (`https://simple-books-api.glitch.me/books/${props.params.id}`)

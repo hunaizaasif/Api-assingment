@@ -6,8 +6,10 @@ export default async function Home() {
   return (
     <main>
       {
-        response.map((book: any) => (
-          <div>
+        
+        response.map((book: { id: number; name: string}) => (
+          
+          <div key={book.id} className="flex flex-col items-center justify-center min-h-screen py-2">
           
             <Link href={`${book.id}`}>
               <h1 className="text-7xl">
